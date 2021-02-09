@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --mode=development --config webpack.config.js",
+    "start": "node server.js",
     "build": "webpack --config webpack.production.config.js"
   },
   "author": "Freddy Liu",
@@ -17,6 +17,7 @@
     "babel-loader": "^8.2.2",
     "compression-webpack-plugin": "^7.1.2",
     "css-loader": "^5.0.1",
+    "express": "^4.17.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.1",
     "image-minimizer-webpack-plugin": "^2.2.0",
@@ -40,6 +41,7 @@
     "emailjs-com": "^2.6.4",
     "headroom.js": "^0.12.0",
     "jquery": "^3.5.1",
+    "lodash": "^4.17.20",
     "paroller.js": "^1.4.7",
     "tailwindcss": "^2.0.2",
     "vanilla-tilt": "^1.7.0"
@@ -47,5 +49,8 @@
   "env": {
     "NPM_CONFIG_PRODUCTION": "false",
     "NODE_ENV": "development"
+  },
+  "engines": {
+    "node": "14.15.4"
   }
 }

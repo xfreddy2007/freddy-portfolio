@@ -6,15 +6,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     entry: {
-        vendor: {
-            import: './src/vendor.js',
-            dependOn: 'shared'
-        },
-        main: {
-            import: './src/index.js',
-            dependOn: 'shared'
-        },
-        shared: 'lodash',
+        vendor: './src/vendor.js',
+        main: './src/index.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
