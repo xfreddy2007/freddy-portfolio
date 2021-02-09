@@ -38,17 +38,32 @@ VanillaTilt.init(document.querySelector('.tilt'),{
 
 // emailjs initialization
 const form = document.getElementById('contact-form');
+const message = document.getElementById('response');
 
 function sendEmail(e) {
     e.preventDefault();
 
     emailjs.sendForm('service_v72nvfp', 'template_fm53pm1', e.target, 'user_X9kgtqlsTa8Bzfr5s9Kpa')
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-      }, (error) => {
-        console.log('FAILED...', error);
-      });
-  }
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            message.textContent = 'Success!!';
+            message.classList.remove('hidden');
+            message.classList.add('text-green-500', 'border-green-500');
+            setTimeout(() => {
+                message.classList.remove('text-green-500', 'border-green-500');
+                message.classList.add('hidden');
+            }, 2500);
+        }, (error) => {
+            console.log('FAILED...', error);
+            message.textContent = 'Failed! Please resend message!';
+            message.classList.remove('hidden');
+            message.classList.add('text-red-500', 'border-red-500');
+            setTimeout(() => {
+                message.classList.remove('text-red-500', 'border-red-500');
+                message.classList.add('hidden');
+            }, 2500);
+        });
+}
 
   form.addEventListener('submit', sendEmail);
 
