@@ -1,0 +1,7 @@
+/* main */
+.parallax {
+    background-image: url('../assets/background.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+}

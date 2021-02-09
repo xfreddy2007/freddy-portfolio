@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Nunito&family=Source+Code+Pro:ital@1&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'root.css';
+@import 'background.css';
+@import 'navigation.css';
+@import 'footer.css';
+
+@import 'button.css';

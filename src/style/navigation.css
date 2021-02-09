@@ -1,0 +1,57 @@
+/* Header */
+.headroom {
+    will-change: transform;
+    transition: transform 500ms linear;
+}
+.header--fixed {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+/* Menu Bars */
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* Menu Bar */
+
+.overlay-slide-down {
+    transition: all 0.4s ease-in-out;
+    transform: translateY(0);
+}
+
+.overlay-slide-up {
+    transition: all 0.8s ease-in-out;
+    transform: translateY(-100vh);
+}
