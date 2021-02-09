@@ -5,3 +5,11 @@
     background-position: center;
     background-size: contain;
 }
+
+/* about */
+.background {
+    background-image: url('../assets/about_pic.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

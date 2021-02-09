@@ -32,9 +32,6 @@ function appendDOMElement(id, image) {
 
 // DOM Elements
 
-// Profile image
-appendDOMElement('about-img', importImages(profilePic, ['h-full', 'w-full', 'object-cover']));
-
 // home work gallery
 appendDOMElement('home-img-1', importImages(smartBrain, ['h-full', 'w-full', 'rounded-2xl', 'object-cover']));
 appendDOMElement('home-img-2', importImages(movieRecommend, ['h-full', 'w-full', 'rounded-2xl', 'object-cover']));
@@ -66,23 +63,12 @@ appendDOMElement('project-dog', importImages(dogBreedsClassifier, ['h-full', 'w-
 const menuBars = document.getElementById('menu-bars');
 const navMenu = document.getElementById('menu');
 
+const menuWork = document.getElementById('menu-work');
+const menuAbout = document.getElementById('menu-about');
+const menuContact = document.getElementById('menu-contact');
+
 
 // ---------- Functions & Event Listeners ---------- //
-
-// ----- Toggle Menubars ----- //
-function toggleNav() {
-    // Toggle: Menu Bars Open/Closed
-    menuBars.classList.toggle('change');
-    // Open/Close navMenu
-    if (menuBars.classList.contains('change')) {
-        navMenu.classList.remove('hidden');
-    } else {
-        navMenu.classList.add('hidden');
-    }
-}
-
-// Event Listener
-menuBars.addEventListener('click', toggleNav);
 
 // ---------- Switch Page functions ---------- //
 const home = document.getElementById('home');
@@ -130,3 +116,30 @@ dogBreedBtn.addEventListener('click', switchPage);
 backBtn.forEach((element) => {
     element.addEventListener('click', goBackPage);
 });
+
+// ----- Toggle Menubars ----- //
+function toggleNav() {
+    // Toggle: Menu Bars Open/Closed
+    menuBars.classList.toggle('change');
+    // Open/Close navMenu
+    if (menuBars.classList.contains('change')) {
+        navMenu.classList.remove('hidden');
+    } else {
+        navMenu.classList.add('hidden');
+    }
+}
+
+function menuClick(e) {
+    toggleNav();
+    let page = e.srcElement.id.split('-')[1];
+    document.getElementById(activePage).classList.toggle('hidden');
+    document.getElementById(`${page}-page`).classList.toggle('hidden');
+    activePage = `${page}-page`
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+// Event Listener
+menuBars.addEventListener('click', toggleNav);
+menuAbout.addEventListener('click', menuClick);
+menuWork.addEventListener('click', menuClick);
+menuContact.addEventListener('click', menuClick);
