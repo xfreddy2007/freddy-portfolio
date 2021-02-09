@@ -88,6 +88,9 @@ const backBtn = document.querySelectorAll('.backpage');
 let activePage = 'home-page';
 
 function switchPage(e) {
+    if (e.srcElement.id === 'home' && menuBars.classList.contains('change')) {
+        toggleNav();
+    }
     document.getElementById(activePage).classList.toggle('hidden');
     document.getElementById(`${e.srcElement.id}-page`).classList.toggle('hidden');
     activePage = `${e.srcElement.id}-page`
