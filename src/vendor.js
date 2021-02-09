@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 import 'jquery';
 import 'vanilla-tilt';
 import Headroom from "headroom.js";

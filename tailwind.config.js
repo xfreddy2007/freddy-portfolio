@@ -1,5 +1,13 @@
 module.exports = {
-  purge: [],
+  purge: {
+    content: [
+      './src/index.html',
+      './src/index.js,',
+      './src/vendor.js'],
+    options: {
+      keyframes: true,
+    },
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {

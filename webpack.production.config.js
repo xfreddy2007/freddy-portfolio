@@ -9,8 +9,15 @@ const CompressionPlugin = require('compression-webpack-plugin');
 module.exports = {
     mode: 'production',
     entry: {
-        vendor: './src/vendor.js',
-        main: './src/index.js'
+      vendor: {
+        import: './src/vendor.js',
+        dependOn: 'shared'
+    },
+    main: {
+        import: './src/index.js',
+        dependOn: 'shared'
+    },
+    shared: 'lodash',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -24,7 +31,7 @@ module.exports = {
         }),
         new CompressionPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'dist.bundle.css'
+            filename: '[name].bundle.css'
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
@@ -55,7 +62,16 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader', 'postcss-loader']
+                use: [
+                  {
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                      publicPath: ''
+                    }
+                  },
+                  'css-loader',
+                  'postcss-loader',
+                ]
             },
             {
                 test: /\.js$/,
@@ -87,19 +103,13 @@ module.exports = {
     },
 
     optimization: {
+        runtimeChunk: 'single',
+        splitChunks: {
+          chunks: 'all',
+        },
         minimize: true,
         minimizer: [
             new TerserPlugin(),
         ],
-    },
-
-    devtool: 'inline-source-map',
-
-    devServer: {
-        watchContentBase: true,
-        contentBase: path.resolve(__dirname, 'dist'),
-        compress: true,
-        port: 8080,
-        open: true
     }
 }
