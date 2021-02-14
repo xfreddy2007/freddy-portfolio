@@ -31,7 +31,7 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
         }),
-        new BundleAnalyzerPlugin(),
+        // new BundleAnalyzerPlugin(),
         new ImageMinimizerPlugin({
             minimizerOptions: {
               plugins: [
