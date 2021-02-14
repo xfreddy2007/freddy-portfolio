@@ -1,14 +1,8 @@
 // Import modules
 import './style/style.css'
-import '@fortawesome/fontawesome-free/js/fontawesome'
-import '@fortawesome/fontawesome-free/js/solid'
-import '@fortawesome/fontawesome-free/js/regular'
-import '@fortawesome/fontawesome-free/js/brands'
 
 // ---------- Image for whole Project ---------- //
 // Import Images and Importing function
-import profilePic from './assets/about_pic.jpg';
-
 import smartBrain from './assets/smart-brain.png'
 import movieRecommend from './assets/movie-recommendation.jpg';
 import bulldozer from './assets/bulldozer-price-prediction.jpg';

@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --mode=development --config webpack.config.js",
     "start": "node server.js",
-    "build": "webpack --config webpack.production.config.js"
+    "build": "webpack --config webpack.production.config.js --profile --json > stats.json"
   },
   "author": "Freddy Liu",
   "license": "ISC",
@@ -33,11 +33,14 @@
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.1.1",
     "webpack": "^5.21.1",
+    "webpack-bundle-analyzer": "^4.4.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "aos": "^2.3.4",
     "emailjs-com": "^2.6.4",
     "headroom.js": "^0.12.0",
