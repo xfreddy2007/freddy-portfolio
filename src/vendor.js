@@ -10,14 +10,12 @@ init("user_X9kgtqlsTa8Bzfr5s9Kpa");
 
 // Font Awesome library
 import { library, icon } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons/faFacebookSquare';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons/faGithubSquare';
-import { faHeart } from '@fortawesome/free-solid-svg-icons/faHeart';
 
-library.add(fab, fas, faFacebookSquare, faLinkedin, faGithubSquare, faHeart);
+library.add(fab, faFacebookSquare, faLinkedin, faGithubSquare);
 
 function showFontAwesome(iconName, parentId, style, title, prefix) {
     const iconText = icon({ prefix: prefix, iconName: iconName});
@@ -30,9 +28,7 @@ function showFontAwesome(iconName, parentId, style, title, prefix) {
 showFontAwesome('facebook-square', 'facebook-container', ['text-sm', 'xl:text-lg', 'md:text-md', 'mr-1', 'lg:mr-4', 'md:mr-3', 'sm:mr-2'], 'Facebook Profile', 'fab');
 showFontAwesome('linkedin', 'linkedin-container', ['text-sm', 'xl:text-lg', 'md:text-md', 'mr-1', 'lg:mr-4', 'md:mr-3', 'sm:mr-2'], 'Linkedin Profile', 'fab');
 showFontAwesome('github-square', 'github-container', ['text-sm', 'xl:text-lg', 'md:text-md', 'mr-1', 'lg:mr-4', 'md:mr-3', 'sm:mr-2'], 'Github Page', 'fab');
-showFontAwesome('heart', 'heart-icon', [], 'heart', 'fas');
 
-// 
 // Headroom.js initialization
 const header = document.querySelector('header');
 const headroom = new Headroom(header, {
