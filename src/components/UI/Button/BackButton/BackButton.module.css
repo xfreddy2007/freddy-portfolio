@@ -1,0 +1,35 @@
+.backbutton {
+    background: linear-gradient(rgb(83, 83, 255), #3730A3);
+    transition: all 0.3s ease-in-out;
+}
+
+.move {
+    margin-right: 0.5rem;
+}
+
+.backbutton:focus {
+    outline: none;
+}
+
+.backbutton:hover .move {
+    animation: movearrow 0.5s ease-in-out infinite;
+}
+
+.backbutton:hover {
+    transform: scale(1.1);
+}
+
+.backbutton:active {
+    transform: scale(0.95);
+    text-decoration: none;
+}
+
+@keyframes movearrow {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-30%);
+    }
+}

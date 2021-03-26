@@ -1,0 +1,11 @@
+.SideDrawer {
+    transition: transform 0.3s ease-out;
+}
+
+.Open {
+    transform: translateY(0);
+}
+
+.Close {
+    transform: translateY(-200%);
+}

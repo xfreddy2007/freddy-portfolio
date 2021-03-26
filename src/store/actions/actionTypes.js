@@ -1,0 +1,2 @@
+export const SET_WORKS_ACTIVE = 'SET_WORKS_ACTIVE';
+export const SET_WORKS_CLOSED = 'SET_WORKS_CLOSED';
