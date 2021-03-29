@@ -1,13 +1,14 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 import Tilt from 'react-parallax-tilt';
 
 const TiltImgae = props => (
-    <div>
+    <LazyLoad>
         <Tilt>
             <img src={props.image} alt={props.alt} className={props.classList.join(' ')}/>
         </Tilt>
-    </div>
+    </LazyLoad>
 );
 
 export default TiltImgae;

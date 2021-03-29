@@ -3,6 +3,7 @@ import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 
 import Layout from './hoc/Layout/Layout';
 import Home from './containers/Home/Home';
+import Spinner from './components/UI/Spinner/Spinner';
 
 import './App.css';
 
@@ -33,7 +34,7 @@ const app = props => {
   return (
     <div>
       <Layout>
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<Spinner/>}>
           {routes}
         </Suspense>
       </Layout>
