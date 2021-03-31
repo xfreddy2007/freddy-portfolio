@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Freddy's Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Hope you can find something interesting in it.
 
-## Available Scripts
+Feel free to try yourself and play with the app. url:https://freddy-portfolio.herokuapp.com/
 
-In the project directory, you can run:
+## Features
+✔️ FrontEnd Project\
+✔️ React Framework used\
+✔️ Implementing React Hooks, Redux, and other features\
+✔️ Tailwindcss implemented\
+✔️ CSS module implemented\
+✔️ Fully Responsive\
+✔️ Valid HTML5 & CSS3
 
-### `npm start`
+## Why React
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+From doing such React courses I try to do a whole new project with React framework, and firt comes to this portfolio in my mind.  React is a widely use framework and has a huge Ecosystem, active community, and high performance. It helps developers to be easier to manage UI states across entire application, and focus on the business logics.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Why Taiwindcss
 
-### `npm test`
+CSS libraries are well known as clean, standard and also have some pre-built animations or components inside the libraries. There are many CSS libraries in the development environment such as Bootstrap, tachyons, etc. I choose to use Taiwindcss because it has a good standard and small bundled file size. In addition, some CSS preprocessor are already implemented and do some autoprefix in order to avoid class naming crash between other libraries or custom defined CSS.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Main Challenge
 
-### `npm run build`
+Actually this project was built without React framework initially. My purpose is to learn Webpack throughout this project. From end-to-end settings with the .config files, learn how to set rules for different files, add plugins to minify files and images, and so on and so forth. These process gives me an overview of how Webpack is working, cause we use `create-react-app` command to initialize the starting state of a project, but not to understand what is behind the scence.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Where to go from here
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This is my first exclusive project from end to end. I am glad I can utilize the techniques I've learned thoughout all the course. Implementing techniques are not very hard but to have an awesome idea about another new project that stands out is a advanced skill, and I am walking towrad this direction. Let's wait for next interesting project to be built.
